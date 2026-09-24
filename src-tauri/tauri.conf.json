@@ -1,0 +1,33 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "ghost-pilot",
+  "version": "0.1.0",
+  "identifier": "com.aiko.ghost-pilot",
+  "build": {
+    "beforeDevCommand": "npm run dev",
+    "devUrl": "http://localhost:1420",
+    "beforeBuildCommand": "npm run build",
+    "frontendDist": "../dist"
+  },
+  "bundle": {
+    "externalBin": [
+      "binaries/llama-server"
+    ],
+    "resources": [
+      "models/*"
+    ]
+  },
+  "app": {
+    "windows": [
+      {
+        "title": "Ghost Pilot",
+        "width": 420,
+        "height": 580,
+        "transparent": true,
+        "decorations": false,
+        "alwaysOnTop": true,
+        "shadow": false
+      }
+    ]
+  }
+}
